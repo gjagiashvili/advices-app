@@ -6,13 +6,18 @@ const Advice = () => {
   const [slip, setSlip] = useState([]);
 
   useEffect(() => {
-    const fetchData = () => {
-      fetch("https://api.adviceslip.com/advice")
-        .then((response) => response.json())
-        .then((data) => setSlip(data.slip));
-    };
     fetchData();
   }, []);
+
+  const fetchData = () => {
+    fetch("https://api.adviceslip.com/advice")
+      .then((res) => res.json())
+      .then((data) => setSlip(data.slip));
+  };
+
+  const buttonHandler = () => {
+    fetchData();
+  };
 
   return (
     <div className={styles["container"]}>
@@ -21,7 +26,7 @@ const Advice = () => {
         <h2 className={styles["main-advice"]}>"{slip.advice}"</h2>
         <img src={divider} className={styles["divider"]} />
       </div>
-      <button className={styles["button"]}>
+      <button className={styles["button"]} onClick={buttonHandler}>
         <img src={dice} />
       </button>
     </div>
