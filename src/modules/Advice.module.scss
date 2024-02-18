@@ -1,0 +1,46 @@
+.button {
+  background-color: hsl(150, 100%, 66%);
+  color: hsl(217, 19%, 24%);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  margin-top: 20px;
+  bottom: -20px;
+  &:hover {
+    box-shadow: 0 0 10px hsl(150, 100%, 66%);
+  }
+}
+
+.container {
+  background-color: hsl(217, 19%, 24%);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    max-width: 80%;
+  }
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.advice-id {
+  color: hsl(150, 100%, 66%);
+  letter-spacing: 7px;
+  font-size: 10px;
+}
+
+.main-advice {
+  color: white;
+  max-width: 500px;
+}
